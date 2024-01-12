@@ -1,0 +1,33 @@
+<div class="card">
+  <div *ngIf="showDetails" class="card-body">
+    <div class="card-body">
+      <h5 class="card-title">{{ marque }}</h5>
+      <p class="card-text">ID: {{ id }}</p>
+      <p class="card-text">Modèle: {{ modele }}</p>
+      <p class="card-text">Description: {{ description }}</p>
+      <p class="card-text">Couleur: {{ couleur }}</p>
+    </div>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Marque</th>
+          <th>Modèle</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ marque }}</td>
+          <td>{{ modele }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="toggleDetails()">Détails</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
